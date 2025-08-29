@@ -1,0 +1,987 @@
+.amnp-single-branch .amnp-choose-branch {
+  visibility: hidden;
+}
+.amnp-key,
+.sticky-key {
+  width: 230px;
+  float: left;
+  font-size: .9em;
+}
+.amnp-key.is_stuck {
+  margin-top: 6em;
+}
+.sticky-key .amnp-key {
+  float: none;
+}
+.amnp-stage {
+  margin-left: 260px;
+  max-width: 100%;
+  color: #000;
+  overflow: hidden;
+}
+.amnp-holder {
+  position: relative;
+  font-size: 15px !important;
+}
+.amnp-holder h3 {
+  font-size: 1.633em;
+}
+.amnp-room-holder {
+  position: relative;
+  margin-bottom: 1em;
+  padding: 1em;
+  border: 3px solid #d1d1d1;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.amnp-room-holder:hover {
+  background-color: #f1f1f1;
+}
+.amnp-room-holder.amnp-room-active {
+  border-color: #46b8da;
+  background-color: #fff;
+}
+.amnp-room-holder > h3 {
+  margin: 0;
+}
+.amnp-day-holder .mCSB_scrollTools {
+  bottom: -18px !important;
+}
+.amnp-day-holder .mCSB_scrollTools {
+  visibility: hidden !important;
+}
+.amnp-room-holder.amnp-room-active .mCSB_scrollTools {
+  visibility: visible !important;
+}
+.amnp-day-holder {
+  height: 3em;
+  overflow: hidden;
+  margin-top: 6px;
+}
+.amnp-room-holder.amnp-room-active .amnp-day-holder {
+  margin-bottom: 1.5em;
+}
+.amnp-day {
+  margin-top: 1em;
+}
+.amnp-segment {
+  height: 2em;
+  background-color: #d2d2d2;
+  display: inline-block;
+  border-left: 1px solid #fff;
+  position: relative;
+  cursor: not-allowed;
+}
+.amnp-segment-open {
+  background-color: #a6d1b3;
+  cursor: pointer;
+}
+.amnp-segment-booked {
+  cursor: not-allowed;
+  background-color: #555555;
+}
+.amnp-segment-selected,
+.amnp-segment-basket {
+  background-color: #22A519;
+}
+.amnp-segment-setup-breakdown,
+.amnp-segment-open.amnp-segment-setup-breakdown,
+.amnp-segment-basket.amnp-segment-basket-setup-breakdown {
+  background-color: #FECA40;
+}
+.amnp-segment-booked.amnp-segment-selected,
+.amnp-segment-booked.amnp-segment-setup-breakdown {
+  background-color: #FC3B36;
+}
+.amnp-segment:after {
+  font-size: .7em;
+  position: absolute;
+  top: -1.5em;
+  left: 0;
+  content: attr(data-time);
+  display: none;
+  white-space: nowrap;
+}
+.amnp-segment.odd:after {
+  display: block;
+}
+.amnp-segment-basket:before {
+  position: absolute;
+  left: 0;
+  top: .5em;
+  width: 100%;
+  content: '\f07a';
+  font: normal normal normal 14px/1 FontAwesome;
+  color: #FFF;
+  text-align: center;
+}
+.amnp-navigation {
+  margin-left: 230px;
+  text-align: center;
+  font-size: 2em;
+}
+.amnp-navigation.is_stuck,
+.is-sticky .amnp-navigation {
+  z-index: 2 !important;
+  background-color: #616161;
+  color: #fff;
+  padding: 0.2em 0 0.2em 230px;
+  border-bottom: 1px solid #d1d1d1;
+  margin-left: 0;
+  width: 100% !important;
+  left: 0;
+}
+.amnp-navigation-title {
+  padding: 0 1em;
+}
+.amnp-navigation i {
+  cursor: pointer;
+}
+.amnp-room-footer {
+  padding: .5em 0 0 0;
+  line-height: 2.2em;
+  text-align: right;
+}
+.amnp-room-details b.with-margin {
+  display: block;
+  margin-top: .5em;
+}
+.amnp-room-details {
+  display: none;
+}
+.amnp-room-details .amnp-title {
+  padding-top: 1em;
+  border-top: 1px solid #d1d1d1;
+}
+.amnp-room-active .amnp-room-details {
+  display: block;
+}
+.amnp-room-details-link {
+  cursor: pointer;
+}
+.amnp-room-details > div > .row {
+  margin-bottom: 1em;
+}
+.amnp-room-details img {
+  max-width: 100%;
+}
+.amnp-room-layout-details {
+  margin-top: 1em;
+}
+.amnp-room-layout-details img {
+  max-width: 100px;
+  float: left;
+  margin: 0 1em 1em 0;
+}
+.amnp-room-layout-title,
+.amnp-details-title {
+  font-weight: bold;
+}
+.amnp-resources-asset-description {
+  font-style: italic;
+}
+.amnp-resources-asset {
+  position: relative;
+  margin-left: 1em;
+}
+.amnp-resources-asset:before {
+  font-family: 'anywhereme';
+  content: '\e83c';
+  position: absolute;
+  top: .2em;
+  left: -1.2em;
+  font-size: .8em;
+}
+.amnp-details-title {
+  font-size: 1.2em;
+  margin-bottom: .5em;
+}
+.amnp-title {
+  font-size: 1.3em;
+}
+.amnp-currency {
+  font-size: 1em;
+}
+.amnp-bookable-assets-list label {
+  font-weight: normal;
+  font-size: 1em;
+}
+.amnp-layouts {
+  border: 1px solid transparent;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  max-height: 14em;
+  padding: .5em;
+  margin: .5em;
+  white-space: nowrap;
+}
+.amnp-layouts > li {
+  text-align: center;
+  display: inline-block;
+  padding: 1em;
+  font-size: .8em;
+}
+.amnp-layouts > li > label,
+.amnp-layouts > li > span {
+  display: block;
+  font-weight: normal;
+}
+.amnp-layouts > li > img {
+  max-width: 8em;
+}
+.amnp-charge-non-refundable-text {
+  font-size: 0.8em;
+}
+.amnp-charge-message {
+  font-size: 1.2em;
+}
+.amnp-charge-icon {
+  float: left;
+}
+.amnp-selection {
+  display: none;
+  margin: 1em 0;
+}
+.amnp-room-holder.amnp-room-active.amnp-room-selection .amnp-selection {
+  display: block;
+}
+.amnp-room-holder.amnp-room-selection.amnp-room-active.amnp-has-error[data-mode="0"] .amnp-selection {
+  display: none;
+}
+.amnp-booking-details {
+  font-weight: 700;
+  display: none;
+  margin-right: 1em;
+}
+.amnp-checkout-now {
+  display: none;
+  margin-right: 1em;
+}
+.amnp-booking-button {
+  display: none;
+}
+.amnp-charge-details {
+  float: right;
+  text-align: right;
+  width: 200px;
+}
+.amnp-reset-button {
+  position: absolute;
+  right: .5em;
+  top: .5em;
+  display: none;
+  background-color: #d2d2d2;
+  color: #fff;
+}
+.amnp-room-active .amnp-reset-button,
+.amnp-room-active .amnp-booking-button,
+.amnp-room-active .amnp-booking-details,
+.amnp-room-active .amnp-checkout-now {
+  display: inline;
+}
+.amnp-message,
+.amnp-cart-message {
+  color: #a94442;
+  display: block;
+  display: none;
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  padding: .5em 1em;
+  line-height: 2;
+  margin: 1em 0;
+}
+.amnp-message i,
+.amnp-cart-message i {
+  font-size: 1.2em;
+}
+.amnp-cart-message {
+  color: #009616;
+  background-color: #dff0d8;
+  border-color: #009616;
+  margin: 0;
+}
+.amnp-has-error.amnp-room-active .amnp-message,
+.amnp-cart-added .amnp-cart-message {
+  display: block;
+}
+.amnp-has-error.amnp-room-active[data-mode="1"] .amnp-message {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border: 1px solid #faebcc;
+  margin-bottom: 1em;
+}
+.anmp-layout-required .amnp-layouts {
+  border: 1px solid #a94442;
+}
+.amnp-unselected-message {
+  text-align: center;
+  font-size: 1.5em;
+  color: #22A519;
+  display: none;
+}
+.amnp-room-holder.amnp-room-active .amnp-unselected-message {
+  display: block;
+  margin-bottom: 1.5em;
+}
+.amnp-room-holder.amnp-room-active.amnp-room-selection .amnp-unselected-message {
+  display: none;
+}
+.amnp-login-form {
+  margin: 1em 0;
+}
+.amnp-picker-cart-holder {
+  text-align: right;
+  font-weight: 700;
+  margin-top: .5em;
+}
+.amnp-picker-cart-button {
+  cursor: pointer;
+  position: relative;
+  padding: .5em 1em;
+  border: 1px solid transparent;
+  border-bottom: none;
+  height: 30px;
+}
+.amnp-picker-cart-button:hover {
+  border-color: #d1d1d1;
+  background-color: #fff;
+  z-index: 5;
+}
+.amnp-picker-cart {
+  display: none;
+  position: absolute;
+  top: 31px;
+  right: 0;
+  width: 500px;
+  max-width: 90vw;
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  padding: .5em 1em;
+  min-height: 50px;
+}
+.amnp-picker-cart-button:hover .amnp-picker-cart {
+  display: block;
+  z-index: -1;
+}
+.amnp-booking-summary {
+  text-align: left;
+  margin-bottom: 1.5em;
+}
+.amnp-booking-summary img {
+  max-height: 3em;
+  float: left;
+  padding-right: 1em;
+}
+.amnp-booking-summary-title,
+.amnp-booking-summary-time {
+  color: #000;
+  font-weight: 700;
+}
+.amnp-booking-summary-time {
+  font-size: .8em;
+  padding: .5em 0;
+}
+.amnp-booking-summary-details,
+.amnp-booking-summary-asset,
+.amnp-booking-summary-total {
+  border-bottom: 1px solid #d1d1d1;
+  clear: both;
+  overflow: hidden;
+}
+.amnp-booking-summary-asset > div,
+.amnp-booking-summary-total > div {
+  display: inline-block;
+  font-size: .8em;
+  font-weight: normal;
+}
+.amnp-booking-summary-booking-remove {
+  cursor: pointer;
+  width: 10%;
+  text-align: center;
+}
+.amnp-booking-summary-booking-cost,
+.amnp-booking-summary-asset-qty,
+.amnp-booking-summary-booking-qty {
+  color: #000;
+  width: 10%;
+}
+
+.amnp-booking-summary-booking-subtotal {
+  font-weight: 700 !important;
+  color: #000;
+  width: 10%;
+  margin-left: 80%;
+}
+.amnp-booking-summary-booking-total-cost {
+  color: #000;
+  width: 10%;
+  font-weight: 700 !important;
+  text-align: right;
+}
+.amnp-booking-summary-booking-cost {
+  text-align: right;
+}
+.amnp-booking-summary-booking-name {
+  color: #000;
+  width: 80%;
+}
+.amnp-booking-summary-booking-ticket {
+  color: #000;
+  width: 80%;
+}
+.amnp-booking-summary-buttons {
+  margin-left: 0.5em;
+}
+.amnp-booking-summary-offline-message {
+  text-align: center;
+  font-weight: 700;
+  color: #000;
+}
+.amnp-picker-cart-total {
+  color: #000;
+  display: inline-block;
+  padding-right: 1em;
+}
+.amnp-booking-summary-total .amnp-booking-summary-booking-name {
+  width: 80%;
+}
+.amnp-reserve-screen .amnp-booking-summary-booking-remove,
+.amnp-confirm-screen .amnp-booking-summary-booking-remove {
+  display: none;
+}
+.amnp-reserve-screen .amnp-booking-final-summary-heading {
+  margin-bottom: 1em;
+}
+.amnp-booking-summary-booking-subtotal, .amnp-booking-summary-booking-qty {
+  text-align: right;
+  padding-right: 1em;
+}
+.amnp-booking-summary-noborder {
+  border: 0 !important;
+}
+.amnp-booking-summary-border {
+  border-bottom: 1px solid #d1d1d1 !important;
+}
+
+.amnp-reserve-screen,
+.amnp-booker-summary {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.amnp-reserve-screen-basket.amnp-login-required .amnp-booker-fields {
+  display: none;
+}
+.amnp-booker-summary {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+.amnp-booker-holder {
+  margin-top: 2em;
+  overflow: hidden;
+}
+.amnp-booker-holder .amf-row {
+  margin-bottom: .5em;
+}
+.amnp-booker-holder .amf-row label {
+  text-align: right;
+}
+.amnp-buttons {
+  margin-top: 1em;
+  text-align: right;
+}
+.amnp-buttons .btn {
+  margin-left: .5em;
+}
+.amnp-booking-room-details img {
+  max-width: 100%;
+  padding: 0 1em 1em 1em;
+}
+.amnp-booking-final-summary {
+  background-color: #F2F2F2;
+  color: #000;
+  padding: 1em;
+  padding-bottom: 1000px;
+  margin-bottom: -1000px;
+  height: 100%;
+}
+.amnp-confirm-screen > .row {
+  overflow: hidden;
+}
+.amnp-booking-final-summary-heading,
+.amnp-booking-final-summary-subheading {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.amnp-booking-final-summary-subheading {
+  font-size: 1.1em;
+  margin-top: .5em;
+}
+.amnp-booking-room-desc {
+  margin-bottom: 1em;
+}
+.amnp-booking-final-summary-assets {
+  margin-bottom: 1em;
+}
+.amnp-bookable-assets-list {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0 0 0;
+}
+.amnp-charge-total {
+  display: inline-block;
+  font-weight: 700;
+  margin-right: 1em;
+}
+.amnp-booking-options label {
+  font-weight: normal;
+}
+.amnp-room-summary-back {
+  float: right;
+  cursor: pointer;
+}
+.amnp-key-list {
+  display: none;
+  font-size: .8em;
+}
+.amnp-key-list > div {
+  display: inline-block;
+  margin-right: 1em;
+}
+.amnp-room-active .amnp-key-list {
+  display: block;
+}
+.amnp-key-list .amnp-segment {
+  width: 1em;
+  display: inline-block;
+  height: 1em;
+  margin-right: .5em;
+}
+.amnp-location-select {
+  max-height: 250px;
+  overflow-y: auto;
+  text-align: left;
+}
+@media (min-height: 875px) {
+	.amnp-location-select{
+		max-height: 375px;
+	}
+}
+.amnp-location-select label {
+  display: block;
+  font-weight: normal;
+  margin: .1em .5em;
+}
+.amnp-location-select input {
+  margin-right: .5em;
+}
+.amnp-loader {
+  min-height: 300px;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  right: 0;
+  text-align: center;
+  padding: 4em;
+  opacity: .5;
+}
+.amnp-loader .amnp-spinner {
+  margin: 4em;
+  display: inline-block;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #46b8da;
+  border-bottom: 16px solid #46b8da;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin .8s linear infinite;
+}
+.events2-reg-paypal-thanks-body {
+  min-height: 300px;
+}
+.amnp-paypal-loader {
+  min-height: 300px;
+  background-color: #fff;
+  text-align: center;
+  padding: 4em;
+  opacity: .5;
+}
+.amnp-paypal-loader .amnp-spinner {
+  margin: 4em;
+  display: inline-block;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #46b8da;
+  border-bottom: 16px solid #46b8da;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin .8s linear infinite;
+}
+.amnp-paypal-loader-sm {
+  margin: 1px !important;
+  min-height: 50px !important;
+  background-color: #fff !important;
+  text-align: right !important;
+  opacity: .5;
+}
+
+.amnp-paypal-loader-sm .amnp-spinner-sm {
+  margin: 1em !important;
+  display: inline-block !important;
+  border: 4px solid #f3f3f3 !important;
+  border-top: 4px solid #46b8da !important;
+  border-bottom: 4px solid #46b8da !important;
+  border-radius: 50% !important;
+  width: 30px !important;
+  height: 30px !important;
+  animation: spin .8s linear infinite !important;
+}
+
+.amnp-processing-final {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.amnp-processing-charge {
+  font-size: 16px;
+  font-weight: 600;
+  animation: fade 2s linear infinite;
+  text-align: center;
+}
+
+.amnp-processing-charge-sm {
+  font-size: .8em !important;
+  font-weight: 400 !important;
+  animation: fade 2s linear infinite !important;
+  text-align: right !important;
+}
+@keyframes fade {
+  0% {
+    color: #000;
+  }
+  50% {
+    color: #CECECE;
+  }
+  100% {
+    color: #000;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.amnp-error-message {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em;
+  color: #FF7572;
+}
+.amnp-spacer {
+  min-height: 1.5em;
+}
+
+.card-logo {
+  margin-top: .5em;
+}
+.card-logo img {
+  max-width: 18%;
+  max-height: 35px;
+  margin: 0 3px;
+  text-align: center;
+}
+.amnp-picker-header {
+  margin-left: 230px;
+  text-align: center;
+}
+.amnp-picker-message {
+  padding-top: 20px;
+  text-align: center;
+}
+.amnp-lookup-history {
+  margin-left: 245px !important;
+}
+.amnp-key > div {
+  border: 1px solid #d1d1d1;
+  margin-bottom: 1em;
+  background-color: #fff;
+}
+.amnp-key > div > h3 {
+  font-weight: normal;
+  font-size: 1em;
+  text-align: center;
+  padding: .5em 0;
+  margin: 0;
+  background-color: #D7D7D7;
+  color: #555555;
+  text-transform: uppercase;
+}
+.amnp-key > div.amnp-date-picker {
+  background-color: #FCFCFC;
+}
+.amnp-location-section-title > h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.amnp-room-holder > h3 {
+  text-transform: capitalize;
+  color: #252525;
+}
+.amnp-payment-toggle .btn-group {
+  width: 100%;
+}
+.amnp-payment-toggle .btn {
+  width: 50%;
+  margin: 0;
+}
+.amnp-payment-toggle .btn-group label {
+  text-align: center;
+}
+.amnp-offline-form, .amnp-paylater-form {
+  margin: 1em 0;
+  font-size: 1.1em;
+}
+.amnp-group-picker {
+  text-align: center;
+}
+.amnp-group-picker span {
+  display: block;
+  font-weight: normal;
+  font-size: 1em;
+  padding: .5em 0;
+  margin: 0;
+  background-color: #D7D7D7;
+  color: #555555;
+  text-transform: uppercase;
+}
+.amnp-group-picker select {
+  width: 218px;
+  margin: 5px;
+}
+.amnp-choose-class-popup select {
+  width: 268px;
+  margin: 5px 10px;
+}
+.amnp-choose-class-popup > div {
+  padding: 10px;
+}
+.amnp-choose-class-popup .buttons {
+  text-align: right;
+}
+.amnp-responsive-key {
+  display: none;
+}
+@media (max-width: 767px) {
+  .amnp-responsive-key {
+    display: block;
+  }
+  .amnp-holder-v3 .amnp-picker-header h2 {
+    font-size: 2em;
+  }
+  .amnp-holder-v3 .sticky-key,
+  .amnp-holder-v3 .amnp-key,
+  .amnp-holder-v3 .sticky-nav,
+  .amnp-holder-v3 .amnp-navigation {
+    display: none;
+  }
+  .amnp-holder-v3 .amnp-stage,
+  .amnp-holder-v3 .amnp-picker-header {
+    margin-left: 0;
+  }
+  .amnp-booking-summary-booking-remove {
+    width: 20%;
+  }
+  .amnp-booking-summary-booking-cost,
+  .amnp-booking-summary-asset-qty,
+  .amnp-booking-summary-booking-subtotal {
+    width: 20%;
+  }
+  .amnp-booking-summary-booking-name {
+    width: 50%;
+  }
+  .amnp-booking-summary-booking-cost,
+  .amnp-booking-summary-asset-qty,
+  .amnp-booking-summary-booking-subtotal {
+    width: 20%;
+  }
+  .amnp-booking-summary-total .amnp-booking-summary-booking-name,
+  .amnp-booking-summary-booking-subtotal {
+    width: 70%;
+  }
+  .events2-reg-thanks-stage {
+    margin: 1px !important;
+  }
+  .events2-reg-thanks-stage .events2-reg-thanks-title {
+    font-size: 1.2em !important;
+    font-weight: bold !important;
+  }
+}
+
+.svg-box {
+  display:inline-block;
+  position: relative;
+  width:150px;
+}
+
+.green-stroke {
+  stroke:#7CB342;
+}
+
+.red-stroke {
+  stroke: #FF6245;
+}
+
+.yellow-stroke {
+  stroke: #FFC107;
+}
+
+
+.circular circle.path {
+  stroke-dasharray: 330;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  opacity: 0.4;
+  animation: 0.7s draw-circle ease-out;
+}
+
+/*------- Checkmark ---------*/
+.checkmark{
+stroke-width: 6.25;
+  stroke-linecap: round;
+position:absolute;
+  top: 56px;
+  left: 49px;
+  width: 52px;
+  height: 40px;
+}
+
+.checkmark path {
+  animation: 1s draw-check ease-out;
+}
+
+@keyframes draw-circle {
+  0% {
+      stroke-dasharray: 0,330;
+      stroke-dashoffset: 0;
+      opacity: 1;
+  }
+
+  80% {
+      stroke-dasharray: 330,330;
+      stroke-dashoffset: 0;
+      opacity: 1;
+  }
+
+  100%{
+      opacity: 0.4;
+  }
+}
+
+@keyframes draw-check {
+  0% {
+      stroke-dasharray: 49,80;
+      stroke-dashoffset: 48;
+      opacity: 0;
+  }
+
+  50% {
+      stroke-dasharray: 49,80;
+      stroke-dashoffset: 48;
+      opacity: 1;
+  }
+
+  100% {
+      stroke-dasharray: 130,80;
+      stroke-dashoffset: 48;
+  }
+}
+
+/*---------- Cross ----------*/
+
+.cross {
+  stroke-width:6.25;
+  stroke-linecap: round;
+  position: absolute;
+  top: 54px;
+  left: 54px;
+  width: 40px;
+  height: 40px;
+}
+
+.cross .first-line {
+  animation: 0.7s draw-first-line ease-out;
+}
+
+.cross .second-line {
+  animation: 0.7s draw-second-line ease-out;
+}
+
+@keyframes draw-first-line {
+  0% {
+      stroke-dasharray: 0,56;
+      stroke-dashoffset: 0;
+  }
+
+  50% {
+      stroke-dasharray: 0,56;
+      stroke-dashoffset: 0;
+  }
+
+  100% {
+      stroke-dasharray: 56,330;
+      stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-second-line {
+  0% {
+      stroke-dasharray: 0,55;
+      stroke-dashoffset: 1;
+  }
+
+  50% {
+      stroke-dasharray: 0,55;
+      stroke-dashoffset: 1;
+  }
+
+  100% {
+      stroke-dasharray: 55,0;
+      stroke-dashoffset: 70;
+  }
+}
+
+.alert-sign {
+  stroke-width:6.25;
+  stroke-linecap: round;
+  position: absolute;
+  top: 40px;
+  left: 68px;
+  width: 15px;
+  height: 70px;
+  animation: 0.5s alert-sign-bounce cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.alert-sign .dot {
+  stroke:none;
+  fill: #FFC107;
+}
+
+@keyframes alert-sign-bounce {
+  0% {
+      transform: scale(0);
+      opacity: 0;
+  }
+
+  50% {
+      transform: scale(0);
+      opacity: 1;
+  }
+
+  100% {
+      transform: scale(1);
+  }
+}
